@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <header class="masthead" style="background-image: url('{{ url_for('static', filename='img/posting-old-exam-papers-01.jpg') }}')"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Download Your Papers</title>
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+        <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" href="form.css" >
+        <script src="form.js"></script>
+    </head>
+    <body>
+
+
+   
+
+
+        <div>
+            <a class="btn btn-primary float-right" href="/getpapers" role="back"> get-papers</a>
+            <a class="btn btn-primary float-right" href="/" role="home">home</a>
+            <a class="btn btn-primary float-right" href="/upload" role="back"> <--back</a>
+            
+          </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3">
+                     <h3><u><mark>Download papers for {{param}}</mark></u></h3><br>
+                     
+        <form role="form" action= "{{ url_for('download_paper') }}" method="post" id="reused_form" enctype="multipart/form-data"   >
+            <div class="form-group">
+                <label for="batch">
+                    Batch:</label>
+                <input placeholder="The Starting batch is 2016" type="number" class="form-control" oninvalid="this.setCustomValidity('Please Enter numeric batch and valid batch')"
+                id="batch" name="batch"  autofocus required min="2016" max="2020">
+
+            </div>
+            <div class="form-group">
+                <label for="subject">
+                    Subject:</label>
+                <input placeholder="Your prescribed sem subjects" type="subject" class="form-control"
+                id="subject" name="subject" autofocus required maxlength="50">
+            </div>
+            <div class="form-group">
+                <label for="papertype">
+                    Exam type:</label>
+                <input placeholder="MINOR or MAJOR" type="papertype" class="form-control"  oninvalid="this.setCustomValidity('Please Enter exam type major/minor')"
+                
+            </div>
+              
+            <div>
+            
+            </div>     
+                   <br><br>
+
+            
+            <div>
+              
+                <button type="submit" class="btn btn-lg btn-success pull-centre" id="btnContactUs">Download &rarr;</button>
+              
+                    .
+        </form>
+       
+        <div id="succ
+                    <div id="success_message" style="width:100%; height:100%; display:none; "> <h3>Sent your message successfully!</h3> </div>
+                    <div id="error_message" style="width:100%; height:100%; display:none; "> <h3>Error</h3> Sorry there was an error sending your form. </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </body>
+</html>
