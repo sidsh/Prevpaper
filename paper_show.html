@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<title> this page will show papers of sem</title>
+<body>
+    {% if param is defined %}
+    
+    {% for i in param %}
+    <table>
+      <tr>
+    <td>serial no: {{ i.sno }}</td>
+    
+    
+    <td>batch    :{{ i.batch }}</td>
+    
+    
+    <td>exam     :{{ i.papertype }}</td>
+    
+</tr>   
+</table>
+
+    
+
+{% endfor %}
+
+{% else %}
+no paper available for this semster 
+{% endif %}
+
+</body>
+</html>
